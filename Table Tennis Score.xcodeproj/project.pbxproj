@@ -13,6 +13,9 @@
 		CF1C1A641F6FAC39007D9102 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1C1A621F6FAC39007D9102 /* Main.storyboard */; };
 		CF1C1A661F6FAC39007D9102 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF1C1A651F6FAC39007D9102 /* Assets.xcassets */; };
 		CF1C1A691F6FAC39007D9102 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF1C1A671F6FAC39007D9102 /* LaunchScreen.storyboard */; };
+		CF1C1A711F6FB168007D9102 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF1C1A701F6FB168007D9102 /* MainView.xib */; };
+		CF1C1A771F72C5A7007D9102 /* SettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C1A761F72C5A7007D9102 /* SettingsController.m */; };
+		CF1C1A7A1F73A636007D9102 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1C1A791F73A636007D9102 /* Settings.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		CF1C1A651F6FAC39007D9102 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF1C1A681F6FAC39007D9102 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF1C1A6A1F6FAC39007D9102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF1C1A701F6FB168007D9102 /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		CF1C1A761F72C5A7007D9102 /* SettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsController.m; sourceTree = "<group>"; };
+		CF1C1A781F72C5BB007D9102 /* SettingsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsController.h; sourceTree = "<group>"; };
+		CF1C1A791F73A636007D9102 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		CF1C1A7B1F73A8F9007D9102 /* Settings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,11 @@
 				CF1C1A671F6FAC39007D9102 /* LaunchScreen.storyboard */,
 				CF1C1A6A1F6FAC39007D9102 /* Info.plist */,
 				CF1C1A591F6FAC39007D9102 /* Supporting Files */,
+				CF1C1A701F6FB168007D9102 /* MainView.xib */,
+				CF1C1A761F72C5A7007D9102 /* SettingsController.m */,
+				CF1C1A781F72C5BB007D9102 /* SettingsController.h */,
+				CF1C1A791F73A636007D9102 /* Settings.m */,
+				CF1C1A7B1F73A8F9007D9102 /* Settings.h */,
 			);
 			path = "Table Tennis Score";
 			sourceTree = "<group>";
@@ -110,6 +123,7 @@
 				TargetAttributes = {
 					CF1C1A551F6FAC39007D9102 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 34G7M3RKAT;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -138,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF1C1A691F6FAC39007D9102 /* LaunchScreen.storyboard in Resources */,
+				CF1C1A711F6FB168007D9102 /* MainView.xib in Resources */,
 				CF1C1A661F6FAC39007D9102 /* Assets.xcassets in Resources */,
 				CF1C1A641F6FAC39007D9102 /* Main.storyboard in Resources */,
 			);
@@ -150,7 +165,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF1C1A771F72C5A7007D9102 /* SettingsController.m in Sources */,
 				CF1C1A611F6FAC39007D9102 /* ViewController.m in Sources */,
+				CF1C1A7A1F73A636007D9102 /* Settings.m in Sources */,
 				CF1C1A5E1F6FAC39007D9102 /* AppDelegate.m in Sources */,
 				CF1C1A5B1F6FAC39007D9102 /* main.m in Sources */,
 			);
@@ -274,10 +291,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 34G7M3RKAT;
 				INFOPLIST_FILE = "Table Tennis Score/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "oce.Table-Tennis-Score";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -285,10 +305,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 34G7M3RKAT;
 				INFOPLIST_FILE = "Table Tennis Score/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "oce.Table-Tennis-Score";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
