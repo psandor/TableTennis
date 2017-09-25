@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Settings.h"
+#import "SettingsController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <DataEnteredDelegate>
 
+@property (retain) SettingsModel* settings;
 
 @end
 

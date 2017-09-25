@@ -21,9 +21,11 @@
 @end
 
 @implementation ViewController
-
+@synthesize settings;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    settings = NULL;
+    
     _btnRestart.contentHorizontalAlignment = UIControlContentHorizontalAlignmentFill;
     _btnRestart.contentVerticalAlignment = UIControlContentVerticalAlignmentFill;
     _btnRestart.imageView.contentMode = UIViewContentModeScaleAspectFit;
@@ -50,12 +52,20 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"showSettingsSegue"]){
         //UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
-        //SettingsController *controller = (SettingsController *)navController.topViewController;
-        //controller.isSomethingEnabled = YES;
+        SettingsController *controller = (SettingsController *)segue.destinationViewController;
+        controller.delegate = self;
+        if(settings != NULL){
+            // if there is some prev. settings object i'll set as a base
+            controller.settings = settings;
+        }
         
     }
 }
-
+-(void)userDidEnterInformation:(SettingsModel *)model {
+    //_label.text = info
+    settings = model;
+    [self.navigationController popViewControllerAnimated:YES];
+}
 -(void)labelLeftTapped: (UITapGestureRecognizer *)recognizer {
     [self addPoint: _lblLeft other:_lblRight];
 }

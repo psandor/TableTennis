@@ -9,9 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "Settings.h"
 
+@protocol DataEnteredDelegate <NSObject>
+-(void)userDidEnterInformation:(SettingsModel *)info;
+@end
+
 @interface SettingsController : UIViewController
+- (IBAction)btnOkClick:(id)sender;
 
 @property SettingsModel *settings;
+@property (nonatomic) id <DataEnteredDelegate> delegate;
 
 @end
+
+
 

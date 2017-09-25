@@ -13,7 +13,15 @@
 @implementation SettingsController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _settings = [[SettingsModel alloc] init];
+    
+    if(_settings == NULL){
+        _settings = [[SettingsModel alloc] init];
+        _settings.point = @21;
+        _settings.LeftPlayer = @"asd";
+    }
 }
 
+- (IBAction)btnOkClick:(id)sender {
+    [_delegate userDidEnterInformation:_settings];
+}
 @end
